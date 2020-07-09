@@ -1,0 +1,26 @@
+
+END
+FUNCTION palind(str,i,j) : BOOLEAN
+VAR
+    isp:true;
+BEGIN
+    IF (str[i]!=str[j]&&i>j) THEN
+        isp:=false;
+    ELSE
+        palind(str,i+1,j-1)
+    END_IF
+    RETURN isp ;
+END
+ALGORITHM palindrome
+VAR
+    str:STRING;
+    i:INTEGER:=0;
+    j:INTEGER;
+BEGIN
+    j:=str.length-1;
+    IF (palind(str,i,j)) THEN
+        write('is palindrome')
+    ELSE
+        write('is not palindrome')
+    END_IF 
+END

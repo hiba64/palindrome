@@ -1,5 +1,5 @@
 
-END
+
 FUNCTION palind(str,i,j) : BOOLEAN
 VAR
     isp:true;
